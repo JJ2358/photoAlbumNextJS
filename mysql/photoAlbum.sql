@@ -58,25 +58,27 @@ CREATE TABLE `tblPhotos` (
   `id` int(11) NOT NULL,
   `title` varchar(100) DEFAULT NULL,
   `caption` longtext,
-  `source` varchar(100) DEFAULT NULL
+  `source` varchar(100) DEFAULT NULL,
+  `width` int(10) DEFAULT NULL,
+  `height` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tblPhotos`
 --
 
-INSERT INTO `tblPhotos` (`id`, `title`, `caption`, `source`) VALUES
-(1, 'On the Beach', 'On the beach on the labour day weekend.  September 2005', '100_1245.jpg'),
-(2, 'My Little nephew', 'Clowning around at my cousin\'s wedding reception', 'IMG_0258.jpg'),
-(3, 'Bugs bugs bugs', 'Befriending bugs', 'IMG_6085.jpg'),
-(4, 'Portage it!', 'Portaging in algonquin park, Ontario, July 2004', 'IMG_6087.jpg'),
-(5, 'Dance Moves', 'Showing off the skills from the latest hip hop dance lesson', 'HPIM0259.jpg'),
-(6, 'The Cat', 'Get off my damn chair!', 'cat.jpg'),
-(7, 'De-weeding the barn', 'Removing the decorative ivy from our newly purchased barn.', 'image6.jpg'),
-(10, 'Darcy in the weeds', 'Darcy at age 2', 'image7.jpg'),
-(11, 'Lego Star Destroyer', 'Best. Gift. Ever.', 'starDestroyer.jpg'),
-(14, 'Darcy at the beach', 'Darcy at the beach', 'image8.jpg'),
-(15, 'Web Student Wellness!', 'Web student wellness in 2009', 'wellness01.jpg');
+INSERT INTO `tblPhotos` (`id`, `title`, `caption`, `source`, `width`, `height`) VALUES
+(1, 'Rawdon River Bridge', 'Our little bridge after an ice storm', 'winterBridge.jpg', 375, 500),
+(2, 'Canoeing and Camping', 'Camping deep in the interior of Algonquin Provincial Park', 'algonquinPark.jpg', 375, 500),
+(3, 'Saturday at the Beach', 'Getting in some beach fun at White Point Beach Resort', 'beach.jpg', 500, 375),
+(4, 'Rainy Day', 'Rainy day on the shores of Bras d`Or Lake in Cape Breton', 'capeBreton.jpg', 375, 500),
+(5, 'Fall is here!', 'Taking in the fall colours at the top of Wentworth', 'fallColours.jpg', 375, 500),
+(6, 'Final Work Experience Debrief', 'The graduating IT class of NSCC, Truro Campus', 'itGrads.jpg', 500, 375),
+(7, 'Bottom of the Sea View', 'An amazing aquarium right at the base of the CN Tower', 'ripleysAquarium.jpg', 500, 375),
+(10, 'Hitting the Hill', 'Minus twenty degrees celsius and we are still on the hill!', 'wentworth.jpg', 500, 375),
+(11, 'Camping along the Rocks', 'Best camping spot ever!', 'camping.jpg', 500, 375),
+(14, 'Stay off the Black Rocks!', 'Warning sign posted at Peggy`s Cove for foolish tourists', 'peggysCove.jpg', 500, 375),
+(15, 'Altitude Sickness', 'The long climb up Jacob`s Ladder in Victoria Park, Truro', 'jacobsLadder.jpg', 375, 500);
 
 -- --------------------------------------------------------
 
