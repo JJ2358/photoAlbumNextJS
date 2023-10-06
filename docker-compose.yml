@@ -28,6 +28,8 @@ services:
     restart: always
     ports:
       - 8080:8080
+    networks:
+        - linkednetwork       
 
   api:
     # where the container's files are located in project folder
