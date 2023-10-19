@@ -1,12 +1,17 @@
-import Link from "next/link";
+import Layout from '../components/Layout';
 
 export default function About() {
-    return(
-        <div className="max-w-[800px] pb-3">
-            <div>This web application is developed with NextJS and implements a Web API (PHP / MySQL). It is completely static site generated which makes it super fast loading and SEO friendly.</div>
-            <div className="mt-2 text-xs">Developed by James McDonald</div>
-            <div className="text-xs">Nova Scotia Community College</div>
-            <Link href="/"><input className="bg-white hover:opacity-50 text-[#035074] py-1 px-2 mt-3 rounded" type="button" value="Back" /></Link>
-        </div>    
+    return (
+        <Layout>
+            <section className="p-4">
+                <h1 className="text-3xl font-bold mb-4">About Portfolio Sampler</h1>
+                <p className="mb-2">
+                    Welcome to the Portfolio Sampler, a web app implemented with Next.js. This platform showcases a collection of photos and allows users to add comments to them.
+                </p>
+                <p>
+                    The backend of this application is powered by PHP scripts that interact with a MySQL database to store and retrieve photos and comments.
+                </p>
+            </section>
+        </Layout>
     );
 }
