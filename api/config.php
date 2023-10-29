@@ -1,5 +1,5 @@
 <?php
-    $servername = "my-mysql-server";
+    $servername = "mysql";
     $username = "w0090347";
     $password = "Forrester308";
     $dbname = "sean_fullstackSamples";
