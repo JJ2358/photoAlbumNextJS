@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="mt-5">
         {children}
       </main>
-      <footer className="text-center py-5 mt-10">
+      <footer className="text-center py-2 mt-5">
         <p>&copy; 2023 Your Name. All rights reserved.</p>
       </footer>
     </div>

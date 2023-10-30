@@ -16,20 +16,23 @@ const AddComment: React.FC<AddCommentProps> = ({ onAdd }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-2 mb-4">
             <input 
                 value={author} 
                 onChange={(e) => setAuthor(e.target.value)} 
                 placeholder="Author" 
                 required 
+                className="border p-2 rounded"
             />
             <textarea 
                 value={comment} 
                 onChange={(e) => setComment(e.target.value)} 
                 placeholder="Comment" 
                 required 
+                className="border p-2 rounded"
+                rows={3}
             />
-            <button type="submit">Add Comment</button>
+            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Comment</button>
         </form>
     );
 }

@@ -12,14 +12,16 @@ interface CommentsListProps {
 const CommentItem: React.FC<{ comment: Comment }> = ({ comment }) => {
     return (
         <div className="border-b border-gray-200 py-2">
-            <strong>{comment.author}</strong>: {comment.comment}
+            <strong className="text-blue-600">{comment.author}</strong>: {comment.comment}
         </div>
     );
 }
 
+
 const CommentsList: React.FC<CommentsListProps> = ({ comments }) => {
     return (
-        <div>
+        <div className="mb-4">
+            <h3 className="text-xl font-semibold mb-2">Comments:</h3>
             {comments.map((comment, index) => (
                 <CommentItem key={index} comment={comment} />
             ))}
