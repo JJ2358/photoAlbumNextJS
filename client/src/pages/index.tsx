@@ -14,6 +14,8 @@ import Navigation from '../components/Navigation';
 import CommentsList from '../components/Comments';
 import AddCommentComponent from '../components/AddComments';
 import { Photo } from '@/tools/samples.model';
+import Jump from '../components/Jump';
+
 
 export default function Home() {
   /**
@@ -81,7 +83,7 @@ export default function Home() {
    * Render the component.
    */
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-">
+    <div className="flex flex-col items-center justify-center">
       {error ? (
         <p className="text-red-500">{error}</p>
       ) : samples.length > 0 ? (
@@ -91,6 +93,7 @@ export default function Home() {
           <p className="mb-4">{samples[currentPhotoIndex].caption}</p>
           <CommentsList comments={samples[currentPhotoIndex].comments || []} />
           <AddCommentComponent onAdd={handleAddComment} />
+          <Jump photos={samples} onJump={setCurrentPhotoIndex} currentPhotoIndex={currentPhotoIndex} />
           <Navigation onNext={handleNext} onPrev={handlePrev} currentPhotoIndex={currentPhotoIndex} totalPhotos={samples.length} />
         </div>
       ) : (

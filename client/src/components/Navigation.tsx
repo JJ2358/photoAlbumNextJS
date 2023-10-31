@@ -1,5 +1,14 @@
 import React from 'react';
 
+/**
+ * Props for the Navigation component.
+ * 
+ * @interface
+ * @property {() => void} onNext - Callback function to navigate to the next photo.
+ * @property {() => void} onPrev - Callback function to navigate to the previous photo.
+ * @property {number} currentPhotoIndex - The index of the currently displayed photo.
+ * @property {number} totalPhotos - The total number of photos in the album.
+ */
 interface NavigationProps {
     onNext: () => void;
     onPrev: () => void;
@@ -7,6 +16,13 @@ interface NavigationProps {
     totalPhotos: number;
 }
 
+/**
+ * Represents the navigation controls for the photo album.
+ * 
+ * @component
+ * @param {NavigationProps} props - The props for the component.
+ * @returns {ReactElement} The rendered navigation controls with "Previous" and "Next" buttons.
+ */
 const Navigation: React.FC<NavigationProps> = ({ onNext, onPrev, currentPhotoIndex, totalPhotos }) => {
     return (
         <div className="flex justify-between items-center mt-4">

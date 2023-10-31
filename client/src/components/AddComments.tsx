@@ -1,13 +1,32 @@
 import React, { useState } from 'react';
 
+/**
+ * Props for the AddComment component.
+ * 
+ * @interface
+ * @property {Function} onAdd - Callback function to handle the addition of a new comment.
+ */
 interface AddCommentProps {
     onAdd: (author: string, comment: string) => void;
 }
 
+/**
+ * Represents a form to add a new comment.
+ * 
+ * @component
+ * @param {AddCommentProps} props - The props for the component.
+ * @returns {ReactElement} The rendered form for adding a comment.
+ */
 const AddComment: React.FC<AddCommentProps> = ({ onAdd }) => {
     const [author, setAuthor] = useState('');
     const [comment, setComment] = useState('');
 
+    /**
+     * Handles the form submission.
+     * 
+     * @function
+     * @param {React.FormEvent} e - The form event.
+     */
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         onAdd(author, comment);
